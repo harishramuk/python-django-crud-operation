@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ {%extends 'testapp/base.html'%}
+    {%block body_block%}
+      <h1>Shiper info...</h1>
+      <table border='2' align = 'center'>
+        <thead>
+          <th>Bill NO</th>
+          <th>ShipperName</th>
+          <th>Rate</th>
+
+          <th>Action</th>
+        </thead>
+        {% for item in send %}
+        <tr>
+          <td>{{item.billno}}</td>
+          <td>{{item.shippername}}</td>
+          <td>{{item.rate}}</td>
+          
+          <td><a href="/update/{{item.billno}}">Update</a> <a href="/delet/{{item.billno}} ">Delete</a></td>
+
+        </tr>
+        {%endfor%}
+      </table><br><br><br>
+      <a href="/creat" class = 'btn btn-success btn-lg'> Add New Parcel</a>
+
+
+    {%endblock%}

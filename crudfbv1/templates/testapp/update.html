@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'testapp/base.html'%}
+   {%block body_block%}
+     <h1>Shiper info update...</h1><hr>
+     <form method="post">
+       {%csrf_token%}
+       Bill No:<input type="text" name="billno" value="{{send.billno}}"><br>
+       ShipperName:<input type="text" name="shippername" value="{{send.shippername}}"><br>
+       Rate:<input type="text" name="rate" value="{{send.rate}}"><br>
+
+       
+
+
+
+    <input type="submit" name="" value="update record">
+
+
+</form>
+
+   {%endblock%}
